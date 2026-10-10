@@ -391,6 +391,7 @@ const flipElectronFuses = async () => {
   try {
     await flipFuses(exePath, {
       version: FuseVersion.V1,
+      resetAdHocDarwinSignature: isMac,
       [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: false,
       [FuseV1Options.OnlyLoadAppFromAsar]: false,
     })
